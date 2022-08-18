@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 export const BatteryStatus: React.FC = () => {
   const [battery, setBattery] = useState<any>(null);
+  const [level, setLevel] = useState(1);
 
   useEffect(() => {
     // @ts-expect-error
@@ -10,6 +11,11 @@ export const BatteryStatus: React.FC = () => {
     // @ts-expect-error
     navigator.getBattery().then((battery: any) => {
       setBattery(battery);
+      setLevel(battery.level);
+
+      battery.addEventListener("levelchange", () => {
+        setLevel(battery.level);
+      });
     });
   }, []);
 
@@ -17,13 +23,12 @@ export const BatteryStatus: React.FC = () => {
     return null;
   }
 
-  console.log(battery);
-
   return (
     <div className="text-white">
       <p>charging: {battery.charging ? "yes" : "no"}</p>
       <p>chargingTime: {battery.chargingTime}</p>
       <p>dischargingTime: {battery.dischargingTime}</p>
+      <p>level: {level}</p>
     </div>
   );
 };
