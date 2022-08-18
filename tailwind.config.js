@@ -2,7 +2,14 @@
 module.exports = {
   content: ["src/**/*.{ts,tsx}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ["Zen Kaku Gothic Antique", "sans-serif"],
+    },
+    extend: {
+      colors: {
+        "android-gray": "#1f1f1f",
+      },
+    },
   },
   plugins: [],
 };

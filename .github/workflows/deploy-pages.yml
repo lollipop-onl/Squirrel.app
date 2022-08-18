@@ -13,8 +13,10 @@ jobs:
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs
+          publish_dir: dist
           cname: squirrel-app.simochee.net
