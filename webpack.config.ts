@@ -1,6 +1,8 @@
 import type { Configuration } from "webpack";
 import CopyPlugin from "copy-webpack-plugin";
 import { ESBuildMinifyPlugin } from "esbuild-loader";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+import WebpackBar from "webpackbar";
 import path from "node:path";
 
 import "webpack-dev-server";
@@ -15,7 +17,10 @@ const config: Configuration = {
     },
   },
   entry: {
-    app: path.join(__dirname, "src/app.tsx"),
+    app: [
+      "webpack-dev-server/client/index.js",
+      path.join(__dirname, "src/app.tsx"),
+    ],
   },
   output: {
     clean: true,
@@ -47,11 +52,24 @@ const config: Configuration = {
       }),
     ],
   },
+  resolve: {
+    plugins: [new TsconfigPathsPlugin()],
+  },
+  stats: false,
   plugins: [
     new CopyPlugin({
       patterns: ["static"],
     }),
   ],
 };
+
+if (isProduction) {
+  config.plugins?.push(
+    new WebpackBar({
+      name: "🐿 Squirrel.app",
+      color: "crimson",
+    })
+  );
+}
 
 export default config;

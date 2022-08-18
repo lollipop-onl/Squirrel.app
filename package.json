@@ -7,6 +7,7 @@
     "build": "WEBPACK_MODE=production webpack"
   },
   "devDependencies": {
+    "@tsconfig/create-react-app": "^1.0.2",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/webfontloader": "^1.6.34",
@@ -19,10 +20,12 @@
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.1.8",
     "ts-node": "^10.9.1",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
     "typescript": "^4.7.4",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.10.0"
+    "webpack-dev-server": "^4.10.0",
+    "webpackbar": "^5.0.2"
   },
   "dependencies": {
     "react": "^18.2.0",
