@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import WebFont from "webfontloader";
 import "tailwindcss/tailwind.css";
 import squirrel from "~/assets/icons/squirrel.svg";
+import { BatteryStatus } from "~/components/BatteryStatus";
 
 WebFont.load({
   google: {
@@ -19,5 +20,6 @@ root.render(
     <div className="absolute inset-0 grid place-items-center">
       <img className="h-40 w-40 opacity-10" src={squirrel} />
     </div>
+    <BatteryStatus />
   </div>
 );
