@@ -15,6 +15,7 @@ const config: Configuration = {
     static: {
       directory: path.join(__dirname, "static"),
     },
+    webSocketServer: false,
   },
   entry: {
     app: path.join(__dirname, "src/entry.tsx"),
@@ -37,6 +38,10 @@ const config: Configuration = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(svg)$/,
+        type: "asset/resource",
       },
     ],
   },

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import WebFont from "webfontloader";
 import "tailwindcss/tailwind.css";
+import squirrel from "~/assets/icons/squirrel.svg";
 
 WebFont.load({
   google: {
@@ -14,7 +15,12 @@ document.body.classList.add("bg-android-gray", "font-sans", "antialiased");
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 
 root.render(
-  <div className="p-4">
-    <p className="text-white">Hello world.</p>
+  <div>
+    <div className="absolute inset-0 grid place-items-center">
+      <img
+        className="h-32 w-32 animate-spin-vertical opacity-10"
+        src={squirrel}
+      />
+    </div>
   </div>
 );
