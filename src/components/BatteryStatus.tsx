@@ -13,9 +13,15 @@ export const BatteryStatus: React.FC = () => {
     });
   }, []);
 
+  if (!battery) {
+    return null;
+  }
+
+  console.log(battery);
+
   return (
-    <div>
-      <p>charging: {battery.charging}</p>
+    <div className="text-white">
+      <p>charging: {battery.charging ? "yes" : "no"}</p>
       <p>chargingTime: {battery.chargingTime}</p>
       <p>dischargingTime: {battery.dischargingTime}</p>
     </div>
