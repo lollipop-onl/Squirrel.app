@@ -17,10 +17,9 @@ const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <div>
     <div className="absolute inset-0 grid place-items-center">
-      <img
-        className="h-32 w-32 animate-spin-vertical opacity-10"
-        src={squirrel}
-      />
+      <div className="rounded-full border-4 border-white p-5 opacity-10">
+        <img className="h-32 w-32 animate-spin-vertical" src={squirrel} />
+      </div>
     </div>
   </div>
 );
