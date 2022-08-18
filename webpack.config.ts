@@ -54,6 +54,7 @@ const config: Configuration = {
     ],
   },
   resolve: {
+    extensions: [".js", ".ts", ".tsx"],
     plugins: [new TsconfigPathsPlugin()],
   },
   stats: "errors-warnings",
