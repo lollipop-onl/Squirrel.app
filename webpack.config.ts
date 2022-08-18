@@ -17,10 +17,7 @@ const config: Configuration = {
     },
   },
   entry: {
-    app: [
-      "webpack-dev-server/client/index.js",
-      path.join(__dirname, "src/app.tsx"),
-    ],
+    app: path.join(__dirname, "src/entry.tsx"),
   },
   output: {
     clean: true,

@@ -15,6 +15,6 @@ const root = ReactDOM.createRoot(document.getElementById("root")!);
 
 root.render(
   <div className="p-4">
-    <p className="text-white">Hello world?</p>
+    <p className="text-white">Hello world.</p>
   </div>
 );
