@@ -3,9 +3,8 @@ import ReactDOM from "react-dom/client";
 import WebFont from "webfontloader";
 import "tailwindcss/tailwind.css";
 import squirrel from "~/assets/icons/squirrel.svg";
-import { BatteryStatus } from "~/components/BatteryStatus";
 import { DigitalClock } from "~/components/DigitalClock";
-import { ButtonReload } from "~/components/ButtonReload";
+import { AppStatusBar } from "~/components/AppStatusBar";
 
 WebFont.load({
   google: {
@@ -13,7 +12,12 @@ WebFont.load({
   },
 });
 
-document.body.classList.add("bg-android-gray", "font-sans", "antialiased");
+document.body.classList.add(
+  "bg-android-gray",
+  "font-sans",
+  "antialiased",
+  "select-none"
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 
@@ -30,12 +34,11 @@ root.render(
     <div className="absolute inset-0 grid place-items-center">
       <img className="h-40 w-40 opacity-10" src={squirrel} />
     </div>
-    <div className="relative">
-      <BatteryStatus />
+    <div className="absolute inset-0 flex flex-col">
       <DigitalClock />
-      <ButtonReload>
-        <span className="text-white">page reload.</span>
-      </ButtonReload>
+      <div className="mt-auto">
+        <AppStatusBar />
+      </div>
     </div>
   </div>
 );
