@@ -4,6 +4,7 @@ import WebFont from "webfontloader";
 import "tailwindcss/tailwind.css";
 import squirrel from "~/assets/icons/squirrel.svg";
 import { BatteryStatus } from "~/components/BatteryStatus";
+import { DigitalClock } from "~/components/DigitalClock";
 
 WebFont.load({
   google: {
@@ -21,5 +22,6 @@ root.render(
       <img className="h-40 w-40 opacity-10" src={squirrel} />
     </div>
     <BatteryStatus />
+    <DigitalClock />
   </div>
 );
