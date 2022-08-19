@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@ionic/react": "^6.2.3",
+    "dayjs": "^1.11.5",
     "ionicons": "^6.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

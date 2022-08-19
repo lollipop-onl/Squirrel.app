@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import dayjs from 'dayjs';
 
 export const DigitalClock: React.FC = () => {
   const [dateTime, setDateTime] = useState<Date>();
@@ -23,8 +24,8 @@ export const DigitalClock: React.FC = () => {
 
   return (
     <div>
-      <p className=" text-8xl font-mono text-white text-center">
-        {Intl.DateTimeFormat("ja", { timeStyle: "medium" }).format(dateTime)}
+      <p className="py-4 text-7xl font-mono text-white text-center">
+        {dayjs(dateTime).format('HH:mm:ss.SSS')}
       </p>
     </div>
   );
