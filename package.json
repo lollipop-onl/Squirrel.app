@@ -8,6 +8,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,json,yml}\""
   },
   "dependencies": {
+    "@ionic/react": "^6.2.3",
+    "ionicons": "^6.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swr": "^1.3.0",
