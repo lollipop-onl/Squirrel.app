@@ -17,6 +17,14 @@ document.body.classList.add("bg-android-gray", "font-sans", "antialiased");
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 
+document.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false }
+);
+
 root.render(
   <div>
     <div className="absolute inset-0 grid place-items-center">
