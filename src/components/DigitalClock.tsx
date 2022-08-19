@@ -24,8 +24,9 @@ export const DigitalClock: React.FC = () => {
 
   return (
     <div>
-      <p className="py-4 text-7xl font-mono text-white text-center">
-        {dayjs(dateTime).format('HH:mm:ss.SSS')}
+      <p className="py-4 flex text-7xl font-mono text-white items-end justify-center">
+        {dayjs(dateTime).format('HH:mm:ss')}
+        <span className="text-5xl">{dayjs(dateTime).format('.SSS')}</span>
       </p>
     </div>
   );
