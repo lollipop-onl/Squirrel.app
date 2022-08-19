@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Zen Kaku Gothic Antique", "sans-serif"],
+      mono: ["Share Tech Mono", "monospace"],
     },
     extend: {
       colors: {

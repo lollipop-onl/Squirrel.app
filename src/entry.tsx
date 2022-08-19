@@ -8,7 +8,7 @@ import { AppStatusBar } from "~/components/AppStatusBar";
 
 WebFont.load({
   google: {
-    families: ["Zen Kaku Gothic Antique"],
+    families: ["Zen Kaku Gothic Antique", "Share Tech Mono"],
   },
 });
 

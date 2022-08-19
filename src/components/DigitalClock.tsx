@@ -23,7 +23,7 @@ export const DigitalClock: React.FC = () => {
 
   return (
     <div>
-      <p className=" text-6xl text-white">
+      <p className=" text-8xl font-mono text-white text-center">
         {Intl.DateTimeFormat("ja", { timeStyle: "medium" }).format(dateTime)}
       </p>
     </div>
